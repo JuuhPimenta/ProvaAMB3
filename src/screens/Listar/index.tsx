@@ -35,7 +35,7 @@ export function Listar({navigation}:TabTypes) {
    useEffect(() => {
       navigation.addListener('focus', () =>  fetchData())
    },[])
-   async function handleRemove(id: number) {
+   async function handleRemove(id: Number) {
     try {
         setLoading(true)
       await apiLivro.delete(id)

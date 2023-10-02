@@ -8,8 +8,8 @@ class LivroData {
     store(data: ILivro) {
        return api.post('/livro', data)
     }
-    delete() {
-        return api.delete('/livro/${id}')
+    delete(id : Number) {
+        return api.delete(`/livro/${id}`)
     }
 }
 export default new LivroData()
